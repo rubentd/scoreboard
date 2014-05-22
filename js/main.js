@@ -5,6 +5,12 @@ $(document).ready( function(){
 	$(document).keyup(function(e){
 		game.listenKeys(e);
 	});
+	$(".score.white-player").click(function(){
+		game.goal( game.white, game.blue );
+	})
+	$(".score.blue-player").click(function(){
+		game.goal( game.blue, game.white );
+	});
 
 });
 
@@ -212,4 +218,9 @@ function adjustHeight(){
 	$(".score").css('height', h + 'px');
 	$(".score").css('line-height', h + 'px');
 	$(".score").css('font-size', h*.8 + 'px');
+	if($(window).width() <= 600 ){
+		$(".score").css('font-size', h*.5 + 'px');
+	}else if($(window).width() <= 400 ){
+		$(".score").css('font-size', h*.3 + 'px');
+	}
 }

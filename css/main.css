@@ -169,6 +169,7 @@ Author's custom styles
 	display: inline-block;
 	width: 100%;
 	height:600px;
+	cursor:pointer;
 }
 
 .score{
